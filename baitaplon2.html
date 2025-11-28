@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quản lý đơn hàng & thanh toán trực tuyến</title>
+  <link rel="stylesheet" href="baitaplon2.css">
+</head>
+<body>
+  <header>
+    <h1>Quản lý đơn hàng và Thanh toán</h1>
+    <nav>
+      <ul class="menu">
+        <li><a href="#home" class="active">Trang chủ</a></li>
+        <li><a href="#orders">Đơn hàng</a></li>
+        <li><a href="#invoice">Hóa đơn</a></li>
+        <li><a href="#payment">Lịch sử</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="dashboard">
+    <h2>Tổng Đơn Hàng</h2>
+    <div class="grid">
+      <div class="card blue">
+        <h3>Đơn hàng mới</h3>
+        <p>5</p>
+      </div>
+      <div class="card green">
+        <h3>Đang giao</h3>
+        <p>2</p>
+      </div>
+      <div class="card orange">
+        <h3>Hoàn thành</h3>
+        <p>1</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="orders">
+    <h2>Danh sách Đơn hàng</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Mã đơn</th>
+          <th>Khách hàng</th>
+          <th>Trạng thái</th>
+          <th>Thao tác</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>DH001</td>
+          <td>Nguyễn Văn Nam</td>
+          <td class="status-shipped">Đang vận chuyển</td>
+          <td><button class="btn-cancel">Hủy đơn</button></td>
+        </tr>
+        <tr>
+          <td>DH002</td>
+          <td>Trần Thị Hoa</td>
+          <td class="status-delivered">Hoàn thành</td>
+          <td><button disabled class="btn-disabled">Đã giao</button></td>
+        </tr>
+        <tr>
+          <td>DH003</td>
+          <td>Lê Minh Tuấn</td>
+          <td class="status-cancel">Đã hủy</td>
+          <td><button disabled class="btn-disabled">Đã hủy</button></td>
+        </tr>
+        <tr>
+          <td>DH004</td>
+          <td>Dương Văn Mạnh</td>
+          <td class="status-shipped">Đang vận chuyển</td>
+          <td><button class="btn-cancel">Hủy đơn</button></td>
+        </tr>
+        <tr>
+          <td>DH005</td>
+          <td>Nguyễn Phú Quý</td>
+          <td class="status-cancel">Đã hủy</td>
+          <td><button disabled class="btn-disabled">Đã hủy</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="invoice">
+    <h2>Hóa đơn & Thanh toán</h2>
+    <div class="invoice">
+      <p><b>Mã hóa đơn:</b> INV-2025-001</p>
+      <p><b>Khách hàng:</b> Nguyễn Văn Nam</p>
+      <p><b>Ngày:</b> 5/11/2025</p>
+      <table class="invoice-table">
+        <thead>
+          <tr><th>Sản phẩm</th><th>Số lượng</th><th>Đơn giá</th><th>Thành tiền</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Áo thun</td><td>2</td><td>150.000₫</td><td>300.000₫</td></tr>
+          <tr><td>Quần jeans</td><td>1</td><td>450.000₫</td><td>450.000₫</td></tr>
+        </tbody>
+      </table>
+      <p class="invoice-total">Tổng cộng: <b>750.000₫</b></p>
+
+      <div class="payment-select">
+        <h4>Phương thức thanh toán</h4>
+        <label><input type="radio" name="payment" checked> Thanh toán khi nhận hàng (COD)</label>
+        <label><input type="radio" name="payment"> Chuyển khoản ngân hàng</label>
+        <label><input type="radio" name="payment"> Ví điện tử (Momo, ZaloPay, ShopeePay...)</label>
+      </div>
+
+      <p><b>Trạng thái:</b> <span class="status-delivered">Đã thanh toán</span></p>
+    </div>
+  </section>
+
+  <section id="payment">
+    <h2>Lịch sử Giao dịch</h2>
+    <table>
+      <thead>
+        <tr><th>Mã GD</th><th>Mã Đơn</th><th>Số tiền</th><th>Trạng thái</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>GD001</td><td>DH001</td><td>750.000₫</td><td class="status-delivered">Thành công</td></tr>
+        <tr><td>GD002</td><td>DH002</td><td>1,150.000₫</td><td class="status-delivered">Thành công</td></tr>
+        <tr><td>GD003</td><td>DH003</td><td>550.000₫</td><td class="status-cancel">Hủy đơn</td></tr>
+        <tr><td>GD004</td><td>DH004</td><td>450.000₫</td><td class="status-delivered">Thành công</td></tr>
+        <tr><td>GD005</td><td>DH005</td><td>950.000₫</td><td class="status-cancel">Hủy đơn</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <footer>
+    <p>©2025 - Quản lý Đơn hàng & Thanh toán</p>
+  </footer>
+</body>
+</html>
